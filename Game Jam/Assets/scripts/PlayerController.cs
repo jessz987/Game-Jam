@@ -27,15 +27,12 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         moveDirection *= 0.75f;
-
-
+        
         if (Input.GetKey(rightKey))
         {
+            lastKeyLeft = false;
             moveDirection += Vector2.right;
             Debug.Log("move right");
-        }
-        else
-        {
             spriteRenderer.flipX = false;
         }
 
@@ -44,6 +41,7 @@ public class PlayerController : MonoBehaviour {
             moveDirection += Vector2.left;
             Debug.Log("move left");
             spriteRenderer.flipX = true;
+            lastKeyLeft = true;
         }
         else if (lastKeyLeft)
         {
