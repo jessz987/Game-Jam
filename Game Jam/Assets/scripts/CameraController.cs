@@ -9,13 +9,12 @@ public class CameraController : MonoBehaviour
     public Transform player;
 
     public float lerpSpeed;
-    
 
     void Update()
     {
-          Vector3 target = player.transform.position + offset;
+        Vector3 target = player.transform.position + offset;
 
-        /*float camXExtent = Camera.main.orthographicSize * Camera.main.aspect;
+        float camXExtent = Camera.main.orthographicSize * Camera.main.aspect;
 
 
         if (target.x + camXExtent > Xmax + camXExtent)
@@ -26,7 +25,7 @@ public class CameraController : MonoBehaviour
         if (target.x - camXExtent < Xmin - camXExtent)
         {
             target.x = Xmin;
-        }*/
+        }
 
 
         transform.position += (target - transform.position) * lerpSpeed;

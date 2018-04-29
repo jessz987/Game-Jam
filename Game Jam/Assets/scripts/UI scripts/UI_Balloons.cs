@@ -17,7 +17,6 @@ public class UI_Balloons : MonoBehaviour {
         if (GameManager.gotBalloons)
         {
             balloons.SetActive(true);
-            Debug.Log("UI Radio active");
             //or orig have blanket as grayscale and make it colour in UI when you pick it up?
         }
     }

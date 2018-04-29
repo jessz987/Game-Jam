@@ -9,4 +9,6 @@ public class GameManager : MonoBehaviour {
     public static bool gotBouquet;
     public static bool gotWine;
     public static bool gotBalloons;
+
+    public static bool gotEverything;
 }

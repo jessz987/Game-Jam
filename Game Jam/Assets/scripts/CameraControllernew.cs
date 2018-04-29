@@ -9,15 +9,13 @@ public class CameraControllernew : MonoBehaviour {
     public float xMin;
     public float yMax;
     public float xMax;
-
-    // Use this for initialization
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
     }
-
-    // Update is called once per frame
+    
     void LateUpdate()
     {
         float x = Mathf.Clamp(player.transform.position.x, xMin, xMax);

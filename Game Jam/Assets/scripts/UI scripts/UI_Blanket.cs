@@ -16,7 +16,6 @@ public class UI_Blanket : MonoBehaviour {
 		if (GameManager.gotBlanket)
         {
             blanket.SetActive(true);
-            Debug.Log("UI Blanket active");
             //or orig have blanket as grayscale and make it colour in UI when you pick it up?
         }
 	}
