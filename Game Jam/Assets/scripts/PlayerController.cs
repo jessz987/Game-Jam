@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    public Animator anim;
 
     DialogueManager dialogueManager;
 
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         dialogueManager = GetComponent<DialogueManager>();
+        anim = GetComponent<Animator>();
         currentChirpCountDown = chirpCountDown;
     }
 	
@@ -55,12 +57,15 @@ public class PlayerController : MonoBehaviour {
 
         // movement code
         moveDirection *= 0.75f;
-        
+        anim.SetBool("biking", false);
+
         if (Input.GetKey(rightKey))
         {
+
             moveDirection += Vector2.right;
             spriteRenderer.flipX = false;
             lastKeyLeft = false;
+            anim.SetBool("biking", true);
         }
 
         if (Input.GetKey(leftKey))
@@ -68,6 +73,7 @@ public class PlayerController : MonoBehaviour {
             moveDirection += Vector2.left;
             spriteRenderer.flipX = true;
             lastKeyLeft = true;
+            anim.SetBool("biking", true);
         }
         else if (lastKeyLeft)
         {
