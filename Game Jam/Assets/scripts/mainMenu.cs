@@ -14,13 +14,13 @@ public class mainMenu : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (Input.GetKeyDown("space"))
         {
             Debug.Log("start game");
-            SceneManager.LoadScene("Scene1");
+            SceneManager.LoadScene("Gameplay");
         }
-
+        */
 
     }
 
@@ -28,7 +28,7 @@ public class mainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Scene1");
     }
-    void onTriggerEnter2D(Collider2D player)
+    void onTriggerStay2D(Collider2D player)
     {
         if (player.gameObject.tag == "Player")
         {
@@ -36,7 +36,7 @@ public class mainMenu : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 Debug.Log("start game");
-                SceneManager.LoadScene("Scene1");
+                SceneManager.LoadScene("Gameplay");
             }
         }
     }
