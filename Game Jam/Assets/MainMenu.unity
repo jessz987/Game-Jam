@@ -307,7 +307,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'wasd to move
 
-    press space to interact/start'
+    press e to ring bell
+
+    press space to interact/start
+
+'
 --- !u!222 &123476360
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -470,6 +474,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32964778, y: 0.3773864}
   m_EdgeRadius: 0
+--- !u!1001 &534517716
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.40866
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.7091594
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.042828068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745743646735706, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3365ae95ac341b747a1ee045531acdf7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &606094938
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +698,12 @@ MonoBehaviour:
   rightKey: 100
   leftKey: 97
   interactKey: 32
+  bellKey: 101
   speed: 100
+  bikePedalingSound: {fileID: 8300000, guid: 43a24e85be2f48245a4ec1e960b19869, type: 3}
+  bikeRingSound: {fileID: 8300000, guid: e7f60f2605d0e73429e180d7ef88916c, type: 3}
+  birdChirpSound: {fileID: 8300000, guid: d25d13925f20c664a81d9d8f5bed0eaa, type: 3}
+  backgroundMusic: {fileID: 0}
 --- !u!212 &745937923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -999,7 +1050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000058174002, y: 152.2}
+  m_AnchoredPosition: {x: -0.000058174002, y: 164.92}
   m_SizeDelta: {x: 800, y: 145.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005179465
@@ -1240,7 +1291,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1417346455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: -0.005, y: -0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008891168}
@@ -1342,7 +1393,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1510562633}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: 0.003, y: -0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1698954319}
@@ -1488,7 +1539,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560014859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: -0.003, y: -0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1150556816}
@@ -1635,7 +1686,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1705241202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: -0.005, y: -0.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2113202881}
@@ -2067,7 +2118,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2086794928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: 0.009, y: -0.525, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 114690812}

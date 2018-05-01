@@ -11,4 +11,6 @@ public class GameManager : MonoBehaviour {
     public static bool gotBalloons;
 
     public static bool gotEverything;
+
+    public static Vector3 playerPosition;
 }
