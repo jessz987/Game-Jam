@@ -47,6 +47,13 @@ public class PlayerController : MonoBehaviour {
 
         GameManager.playerPosition = gameObject.transform.position;
 
+        anim.SetBool("gotBalloon", false);
+
+        if (GameManager.gotBalloons)
+        {
+            anim.SetBool("gotBallon", true);
+        }
+
         // end game check
 
         if (GameManager.gotBalloons && GameManager.gotBlanket && GameManager.gotBouquet && GameManager.gotWine && GameManager.gotRadio)
