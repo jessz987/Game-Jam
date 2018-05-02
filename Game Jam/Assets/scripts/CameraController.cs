@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.PostProcessing;
 
+
 public class CameraController : MonoBehaviour
 {
     public float Xmax;
@@ -10,8 +11,8 @@ public class CameraController : MonoBehaviour
     public Transform player;
 
     public float lerpSpeed;
-
-    public PostProcessingProfile processingBehaviour;
+    //ColorGrading colorGradingLayer = null;
+   //  public PostProcessingProfile processingBehaviour;
 
     void Update()
     {
@@ -32,7 +33,7 @@ public class CameraController : MonoBehaviour
 
         if (GameManager.gotBalloons)
         {
-            processingBehaviour.colorGrading.enabled = false;
+         //   processingBehaviour.colorGrading.enabled = false;
 
         }
 

@@ -265,6 +265,7 @@ namespace UnityEngine.PostProcessing
             public ChannelMixerSettings channelMixer;
             public ColorWheelsSettings colorWheels;
             public CurvesSettings curves;
+            internal object colorGrading;
 
             public static Settings defaultSettings
             {
