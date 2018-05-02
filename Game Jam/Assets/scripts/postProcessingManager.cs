@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.Rendering;
 
 public class postProcessingManager : MonoBehaviour {
     public PostProcessingProfile profile;
-   // ColorGradingModel.Settings colorSettings = processingBehaviour.colorGrading.settings;
+    // ColorGradingModel.Settings colorSettings = processingBehaviour.colorGrading.settings;
+
+    private void Start()
+    {
+        profile.colorGrading.enabled = true;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -14,6 +20,7 @@ public class postProcessingManager : MonoBehaviour {
         if (GameManager.gotBlanket)
         {
            // ChangeSaturation(1);
+          
         }
         if (GameManager.gotBalloons && GameManager.gotBlanket && GameManager.gotBouquet && GameManager.gotWine && GameManager.gotRadio)
         {
