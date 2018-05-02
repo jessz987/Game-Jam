@@ -14,13 +14,13 @@ public class mainMenu : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {/*
+    {
         if (Input.GetKeyDown("space"))
         {
             Debug.Log("start game");
             SceneManager.LoadScene("Gameplay");
         }
-        */
+        
 
     }
 

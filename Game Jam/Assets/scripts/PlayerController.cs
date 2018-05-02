@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.PostProcessing;
 
 public class PlayerController : MonoBehaviour {
 
@@ -35,6 +36,9 @@ public class PlayerController : MonoBehaviour {
     float chirpCountDown;
     float currentChirpCountDown;
 
+ //   public PostProcessingProfile processingProfile;
+
+
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,6 +56,7 @@ public class PlayerController : MonoBehaviour {
         if (GameManager.gotBalloons)
         {
             anim.SetBool("gotBallon", true);
+
         }
 
         // end game check
@@ -157,7 +162,6 @@ public class PlayerController : MonoBehaviour {
                 {
                     dialogueManager.BeginConversation(dialogueNPC);
                 }
-
             }
         }
         else

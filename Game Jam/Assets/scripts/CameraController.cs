@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class CameraController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CameraController : MonoBehaviour
     public Transform player;
 
     public float lerpSpeed;
+
+    public PostProcessingProfile processingBehaviour;
 
     void Update()
     {
@@ -27,6 +30,11 @@ public class CameraController : MonoBehaviour
             target.x = Xmin;
         }
 
+        if (GameManager.gotBalloons)
+        {
+            processingBehaviour.colorGrading.enabled = false;
+
+        }
 
         transform.position += (target - transform.position) * lerpSpeed;
     }
