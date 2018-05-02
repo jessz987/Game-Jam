@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
     public AudioClip backgroundMusic;
 
     AudioSource bikeAudio;
+    AudioSource bgMusic;
 
     float chirpCountDown;
     float currentChirpCountDown;
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 
         if (GameManager.gotBalloons)
         {
-            anim.SetBool("gotBallon", true);
+            anim.SetBool("gotBalloon", true);
 
         }
 
@@ -93,7 +94,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         // audio code
-            
+        
+                   
             // bike pedal audio
 
         if (Input.GetKeyDown(leftKey))
